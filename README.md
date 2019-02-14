@@ -1,5 +1,5 @@
 ### I tried to obtain prime numbers using Cython with OpenMP.
-```python
+```bash
 #Cython compile
 python setup.py build_ext --inplace
 
