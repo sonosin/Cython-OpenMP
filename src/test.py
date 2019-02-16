@@ -2,11 +2,25 @@
 # obtain prime numbers
 import numpy as np
 import time
+import argparse
+
+# settinng argparse
+parser = argparse.ArgumentParser(
+            prog='test.py',
+            usage='obtain prime number by nomal python',
+            description='description', 
+            epilog='end',
+            add_help=True,
+            )
+ 
+parser.add_argument('-n', '--number', default = 10000000)
+args = parser.parse_args()
+print (args.number)
 
 #start time
 start=time.time()
 
-num = 10000000
+num = int(args.number)
 
 def scheck(n):
 	flag = True
