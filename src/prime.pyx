@@ -16,13 +16,13 @@ cdef char scheck(int n) nogil:
 cpdef void main(int num):
 	cdef np.ndarray[np.int_t,ndim=1]prime
 	cdef np.ndarray[np.int_t,ndim=1]non_zero
-	cdef int i,j
-	prime = np.zeros(num).astype(int)
+	cdef int i, j
+	prime = np.zeros(num, dtype = int)
 	
 	with nogil:
 		for i in prange(2, num):
 			if scheck(i) == 'y' :
-				prime[i]=i
+				prime[i] = i
 
 	non_zero = prime[np.where(prime>0)]
 	print (non_zero)
