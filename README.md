@@ -4,10 +4,10 @@
 python setup.py build_ext --inplace
 
 #using Cython with OpenMP
-python test_c.py
+python test_c.py --number 10000000
 
 #normal python
-python test.py
+python test.py --number 10000000
 ```
 
 #### Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz x 12
